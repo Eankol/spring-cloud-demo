@@ -1,0 +1,17 @@
+server:
+  port: 8077
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8072/eureka/
+spring:
+  application:
+    name: zuulserv
+zuul:
+  routes:
+    api-1:
+      path: /user/**
+      serviceId: RIBBONSERV
+    api-2:
+      path: /in/**
+      serviceId: MYSERV2

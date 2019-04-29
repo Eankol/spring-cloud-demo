@@ -1,0 +1,10 @@
+server:
+    port: 8079
+spring:
+    application:
+        name: config-client
+    cloud:
+        config:
+            label: master
+            profile: pro
+            uri: http://localhost:8078

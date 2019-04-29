@@ -1,0 +1,14 @@
+server:
+    port: 8078
+spring:
+    application:
+        name: config-serv
+    cloud:
+        config:
+            server:
+                default-label: master
+                git:
+                    password: ''
+                    searchPaths: confs
+                    uri: https://github.com/Eankol/spring-cloud-conf.git
+                    username: ''
